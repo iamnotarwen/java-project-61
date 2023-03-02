@@ -2,9 +2,9 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Greet {
+public class Engine {
     static String firstName;
-    Greet(int numOfGame) {
+    Engine(int numOfGame) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
@@ -12,11 +12,11 @@ public class Greet {
         System.out.println("Hello, " + firstName + "!");
         if (numOfGame == 2) {
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-            EvenGame.evenGame(1);
+            games.EvenGame.evenGame(1);
         }
         if (numOfGame == 3) {
             System.out.println("What is the result of the expression?");
-            CalcGame.calc(1);
+            games.CalcGame.calc(1);
         }
     }
 }
