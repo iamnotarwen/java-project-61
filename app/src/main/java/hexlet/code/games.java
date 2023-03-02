@@ -2,6 +2,8 @@ package hexlet.code;
 
 import java.util.Random;
 import java.util.Scanner;
+//import hexlet.code.Engine;
+//import java.lang.Math;
 
 public class games {
     public static class EvenGame {
@@ -35,7 +37,8 @@ public class games {
                     System.out.println("Let's try again, " + Engine.firstName);
                     scanner.close();
 
-                } else if ((userAnswer.equals("yes") && (num % 2 == 0)) || (userAnswer.equals("no") && (num % 2 != 0))) {
+                } else if ((userAnswer.equals("yes") && (num % 2 == 0))
+                        || (userAnswer.equals("no") && (num % 2 != 0))) {
                     System.out.println("Correct!");
                     evenGame(count + 1);
                 }
@@ -84,6 +87,39 @@ public class games {
                     calc(count + 1);
                 } else {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + solution + ".");
+                    System.out.println("Let's try again, " + Engine.firstName);
+                }
+            }
+        }
+    }
+    public static class GreatDivider {
+        public static void greatDivider(int count) {
+            if (count == 4) {
+                System.out.println("Congratulations, " + Engine.firstName + "!");
+            } else if (count < 4 && count > 0) {
+                Scanner scanner = new Scanner(System.in);
+                Random random = new Random();
+                int result = 0;
+                int a = 1 + random.nextInt(50);
+                int b = 1 + random.nextInt(50);
+                int maxNum = a;
+                int minNum = b;
+                if (a < b) {
+                    maxNum = b;
+                    minNum = a;
+                }
+                for (int i = 1; i <= minNum; i++) {
+                    if (maxNum % i == 0 && minNum % i == 0) {
+                        result = i;
+                    }
+                }
+                System.out.println("Question: " + a + " " + b);
+                String userAnswer = scanner.next();
+                if (userAnswer.equals(Integer.toString(result))) {
+                    System.out.println("Correct!");
+                    greatDivider(count + 1);
+                } else {
+                    System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + result + ".");
                     System.out.println("Let's try again, " + Engine.firstName);
                 }
             }
