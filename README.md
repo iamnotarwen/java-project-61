@@ -6,4 +6,6 @@ Link about game https://asciinema.org/a/TgIsYsKYU6pHgc3f0KjcnfO4N
 
 Link game Calc https://asciinema.org/a/28yNeW2O46I1vLRoIk7VNCros
 
-Link game GCD https://asciinema.org/a/nCiixnZcAa379pa0n47N6L1nj 
+Link game GCD https://asciinema.org/a/nCiixnZcAa379pa0n47N6L1nj
+
+Link game Progressive https://asciinema.org/a/eSUyuUERJtuAoHIh0lZT2Utkx 
