@@ -22,5 +22,9 @@ public class Engine {
             System.out.println("Find the greatest common divisor of given numbers.");
             games.GreatDivider.greatDivider(1);
         }
+        if (numOfGame == 5) {
+            System.out.println("What number is missing in the progression?");
+            games.Progression.progression(1);
+        }
     }
 }

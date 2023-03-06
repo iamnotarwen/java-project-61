@@ -1,5 +1,6 @@
 package hexlet.code;
 
+//import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 //import hexlet.code.Engine;
@@ -50,12 +51,15 @@ public class games {
         public static int add(int a, int b) {
             return a + b;
         }
+
         public static int minus(int a, int b) {
             return a - b;
         }
+
         public static int multy(int a, int b) {
             return (a * b);
         }
+
         public static void calc(int count) {
             if (count == 4) {
                 System.out.println("Congratulations, " + Engine.firstName + "!");
@@ -92,6 +96,7 @@ public class games {
             }
         }
     }
+
     public static class GreatDivider {
         public static void greatDivider(int count) {
             if (count == 4) {
@@ -120,6 +125,41 @@ public class games {
                     greatDivider(count + 1);
                 } else {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + result + ".");
+                    System.out.println("Let's try again, " + Engine.firstName);
+                }
+            }
+        }
+    }
+
+    public static class Progression {
+        public static void progression(int count) {
+            if (count == 4) {
+                System.out.println("Congratulations, " + Engine.firstName + "!");
+            } else if (count < 4 && count > 0) {
+                Scanner scanner = new Scanner(System.in);
+                Random random = new Random();
+                int startNumber = random.nextInt(20);
+                int countNumbers = 5 + random.nextInt(5);
+                int numOfProgressive = 1 + random.nextInt(5);
+                int indexOfPastNum = 1 + random.nextInt(countNumbers - 1);
+                System.out.print("Question: " + startNumber);
+                int correctResponse = 0;
+                for (int i = 1; i < countNumbers; i++) {
+                    if (i == indexOfPastNum) {
+                        correctResponse = startNumber + i * numOfProgressive;
+                        System.out.print(" " + "..");
+                    } else {
+                        int nextNum = startNumber + i * numOfProgressive;
+                        System.out.print(" " + nextNum);
+                    }
+                }
+                System.out.println();
+                String userAnswer = scanner.next();
+                if (userAnswer.equals(Integer.toString(correctResponse))) {
+                    System.out.println("Correct!");
+                    progression(count + 1);
+                } else {
+                    System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + correctResponse + ".");
                     System.out.println("Let's try again, " + Engine.firstName);
                 }
             }
