@@ -9,7 +9,7 @@ public class Engine {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
-        String firstName = scanner.next();
+        firstName = scanner.next();
         System.out.println("Hello, " + firstName + "!");
         if (numOfGame == App.GAME_NUMBER_EVEN) {
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
