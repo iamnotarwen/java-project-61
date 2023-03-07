@@ -30,7 +30,7 @@ public class games {
                         j = "yes";
                     }
                     System.out.println(i + " is wrong answer ;(. Correct answer was " + j + ".");
-                    System.out.println("Let's try again, " + Engine.firstName);
+                    System.out.println("Let's try again, " + Engine.firstName + "!");
                     scanner.close();
 
                 } else if (!userAnswer.equals("yes") && !userAnswer.equals("no")) {
