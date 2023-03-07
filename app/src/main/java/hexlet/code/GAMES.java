@@ -3,11 +3,13 @@ package hexlet.code;
 import java.util.Random;
 import java.util.Scanner;
 
-public class games {
+public class GAMES {
     static final int NUMBER_RANGE = 20;
     static final int CHOICE_OPERATOR = 3;
     static final int LAST_ROUND = 4;
     static final int FIRST_ROUND = 0;
+    static final int COUNT_DIVIDERS = 3;
+    static final int MIN_LENGTH_NUMBER_SERIES = 5;
     public static class EvenGame {
         public static void evenGame(int count) {
             if (count == LAST_ROUND) {
@@ -81,6 +83,8 @@ public class games {
                         solution = multy(a, b);
                         System.out.println("Question: " + a + " * " + b);
                         break;
+                    default:
+                        break;
                 }
                 String userAnswer = scanner.next();
                 if (userAnswer.equals(Integer.toString(solution))) {
@@ -136,7 +140,7 @@ public class games {
                 Scanner scanner = new Scanner(System.in);
                 Random random = new Random();
                 int startNumber = random.nextInt(NUMBER_RANGE);
-                int countNumbers = 5 + random.nextInt(CHOICE_OPERATOR + 2);
+                int countNumbers = MIN_LENGTH_NUMBER_SERIES + random.nextInt(CHOICE_OPERATOR + 2);
                 int numOfProgressive = 1 + random.nextInt(CHOICE_OPERATOR + 2);
                 int indexOfPastNum = 1 + random.nextInt(countNumbers - 1);
                 System.out.print("Question: " + startNumber);
@@ -192,7 +196,7 @@ public class games {
                     sum++;
                 }
             }
-            return sum < 3;
+            return sum < COUNT_DIVIDERS;
         }
     }
 }
