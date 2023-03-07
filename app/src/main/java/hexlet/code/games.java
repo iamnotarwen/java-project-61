@@ -165,4 +165,37 @@ public class games {
             }
         }
     }
+    public static class Prime {
+        public static void prime(int count) {
+            if (count == 4) {
+                System.out.println("Congratulations, " + Engine.firstName + "!");
+            } else if (count < 4 && count > 0) {
+                Scanner scanner = new Scanner(System.in);
+                Random random = new Random();
+                int num = 2 + random.nextInt(10);
+                System.out.println("Question: " + num);
+                String answerUser = scanner.next();
+
+                if (answerUser.equals("yes") && checkPrime(num)) {
+                    System.out.println("Correct!");
+                    prime(count + 1);
+                } else if (answerUser.equals("no") && !checkPrime(num)) {
+                    System.out.println("Correct!");
+                    prime(count + 1);
+                } else {
+                    System.out.println(answerUser + " is wrong answer ;(.");
+                    System.out.println("Let's try again, " + Engine.firstName);
+                }
+            }
+        }
+        public static boolean checkPrime(int number) {
+            int sum = 0;
+            for (int i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    sum++;
+                }
+            }
+            return sum < 3;
+        }
+    }
 }

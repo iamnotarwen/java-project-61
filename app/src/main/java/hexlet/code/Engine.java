@@ -26,5 +26,9 @@ public class Engine {
             System.out.println("What number is missing in the progression?");
             games.Progression.progression(1);
         }
+        if (numOfGame == 6) {
+            System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+            games.Prime.prime(1);
+        }
     }
 }
