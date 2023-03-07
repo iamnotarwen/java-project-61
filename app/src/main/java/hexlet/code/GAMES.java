@@ -2,6 +2,7 @@ package hexlet.code;
 
 import java.util.Random;
 import java.util.Scanner;
+import hexlet.code.Engine;
 
 public class GAMES {
     static final int NUMBER_RANGE = 20;
