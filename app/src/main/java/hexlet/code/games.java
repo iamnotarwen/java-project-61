@@ -35,7 +35,7 @@ public class games {
 
                 } else if (!userAnswer.equals("yes") && !userAnswer.equals("no")) {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct 'yes' or 'no'.");
-                    System.out.println("Let's try again, " + Engine.firstName);
+                    System.out.println("Let's try again, " + Engine.firstName + "!");
                     scanner.close();
 
                 } else if ((userAnswer.equals("yes") && (num % 2 == 0))
@@ -91,7 +91,7 @@ public class games {
                     calc(count + 1);
                 } else {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + solution + ".");
-                    System.out.println("Let's try again, " + Engine.firstName);
+                    System.out.println("Let's try again, " + Engine.firstName + "!");
                 }
             }
         }
@@ -125,7 +125,7 @@ public class games {
                     greatDivider(count + 1);
                 } else {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + result + ".");
-                    System.out.println("Let's try again, " + Engine.firstName);
+                    System.out.println("Let's try again, " + Engine.firstName + "!");
                 }
             }
         }
@@ -160,7 +160,7 @@ public class games {
                     progression(count + 1);
                 } else {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + correctResponse + ".");
-                    System.out.println("Let's try again, " + Engine.firstName);
+                    System.out.println("Let's try again, " + Engine.firstName + "!");
                 }
             }
         }
@@ -184,7 +184,7 @@ public class games {
                     prime(count + 1);
                 } else {
                     System.out.println(answerUser + " is wrong answer ;(.");
-                    System.out.println("Let's try again, " + Engine.firstName);
+                    System.out.println("Let's try again, " + Engine.firstName + "!");
                 }
             }
         }
