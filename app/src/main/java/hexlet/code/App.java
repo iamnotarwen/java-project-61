@@ -3,43 +3,32 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class App {
+    static String userChoice;
+    static final int GAME_NUMBER_EVEN = 2;
+    static final int GAME_NUMBER_CALC = 3;
+    static final int GAME_NUMBER_GCP = 4;
+    static final int GAME_NUMBER_PROGRESSION = 5;
+    static final int GAME_NUMBER_PRIME = 6;
+
     public static void main(String[] args) {
+        int numberOfGame;
+        String[] listOfGames = {"Exit", "Greet", "Even", "Calc", "GCD", "Progression", "Prime"};
+
 
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet");
-        System.out.println("2 - Even");
-        System.out.println("3 - Calc");
-        System.out.println("4 - GCD");
-        System.out.println("5 - Progression");
-        System.out.println("6 - Prime");
-        System.out.println("0 - Exit");
+        for (int i = 1; i < 7; i++) {
+            numberOfGame = i;
+            System.out.println(numberOfGame + " - " + listOfGames[i]);
+        }
+        System.out.println("0 - " + listOfGames[0]);
 
-        String userChoice = scanner.next();
+        userChoice = scanner.next();
         System.out.println("Your choice: " + userChoice);
-        switch (Integer.parseInt(userChoice)) {
-            case 0:
-                System.out.println("See you soon!");
-                break;
-            case 1:
-                Engine.engine(1);
-                break;
-            case 2:
-                Engine.engine(2);
-                break;
-            case 3:
-                Engine.engine(3);
-                break;
-            case 4:
-                Engine.engine(4);
-                break;
-            case 5:
-                Engine.engine(5);
-                break;
-            case 6:
-                Engine.engine(6);
-                break;
+        if (Integer.parseInt(userChoice) != 0) {
+            Engine.engine(Integer.parseInt(userChoice));
+        } else {
+            System.out.println("See you soon!");
         }
     }
 }

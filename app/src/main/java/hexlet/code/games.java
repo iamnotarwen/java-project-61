@@ -1,48 +1,45 @@
 package hexlet.code;
 
-//import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-//import hexlet.code.Engine;
-//import java.lang.Math;
 
 public class games {
+    static final int NUMBER_RANGE = 20;
+    static final int CHOICE_OPERATOR = 3;
+    static final int LAST_ROUND = 4;
+    static final int FIRST_ROUND = 0;
     public static class EvenGame {
         public static void evenGame(int count) {
-            if (count == 4) {
+            if (count == LAST_ROUND) {
                 System.out.println("Congratulations, " + Engine.firstName + "!");
             }
-            if (count < 4 && count > 0) {
+            if (count < LAST_ROUND && count > FIRST_ROUND) {
                 Scanner scanner = new Scanner(System.in);
                 Random random = new Random();
-                int num = random.nextInt(50);
+                int num = random.nextInt(NUMBER_RANGE);
                 System.out.println("Question: " + num);
                 String userAnswer = scanner.next();
                 System.out.println("Your answer: " + userAnswer);
-                String i;
-                String j;
+                String i = "yes";
+                String j = "no";
                 if ((userAnswer.equals("yes") && num % 2 != 0) || (userAnswer.equals("no") && num % 2 == 0)) {
-                    if (userAnswer.equals("yes")) {
-                        i = "yes";
-                        j = "no";
-                    } else {
+                    if (userAnswer.equals("no")) {
                         i = "no";
                         j = "yes";
                     }
                     System.out.println(i + " is wrong answer ;(. Correct answer was " + j + ".");
-                    System.out.println("Let's try again, " + Engine.firstName + "!");
-                    scanner.close();
+                    //System.out.println("Let's try again, " + Engine.firstName + "!");
+                    //scanner.close();
 
                 } else if (!userAnswer.equals("yes") && !userAnswer.equals("no")) {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct 'yes' or 'no'.");
-                    System.out.println("Let's try again, " + Engine.firstName + "!");
-                    scanner.close();
 
-                } else if ((userAnswer.equals("yes") && (num % 2 == 0))
-                        || (userAnswer.equals("no") && (num % 2 != 0))) {
+                } else {
                     System.out.println("Correct!");
                     evenGame(count + 1);
                 }
+                System.out.println("Let's try again, " + Engine.firstName + "!");
+                scanner.close();
             }
         }
     }
@@ -61,15 +58,15 @@ public class games {
         }
 
         public static void calc(int count) {
-            if (count == 4) {
+            if (count == LAST_ROUND) {
                 System.out.println("Congratulations, " + Engine.firstName + "!");
-            } else if (count < 4 && count > 0) {
+            } else if (count < LAST_ROUND && count > FIRST_ROUND) {
                 Scanner scanner = new Scanner(System.in);
                 Random random = new Random();
                 int solution = 0;
-                int a = random.nextInt(20);
-                int b = random.nextInt(20);
-                int i = random.nextInt(3);
+                int a = random.nextInt(NUMBER_RANGE);
+                int b = random.nextInt(NUMBER_RANGE);
+                int i = random.nextInt(CHOICE_OPERATOR);
 
                 switch (i) {
                     case 0:
@@ -99,14 +96,14 @@ public class games {
 
     public static class GreatDivider {
         public static void greatDivider(int count) {
-            if (count == 4) {
+            if (count == LAST_ROUND) {
                 System.out.println("Congratulations, " + Engine.firstName + "!");
-            } else if (count < 4 && count > 0) {
+            } else if (count < LAST_ROUND && count > FIRST_ROUND) {
                 Scanner scanner = new Scanner(System.in);
                 Random random = new Random();
                 int result = 0;
-                int a = 1 + random.nextInt(50);
-                int b = 1 + random.nextInt(50);
+                int a = 1 + random.nextInt(NUMBER_RANGE);
+                int b = 1 + random.nextInt(NUMBER_RANGE);
                 int maxNum = a;
                 int minNum = b;
                 if (a < b) {
@@ -133,14 +130,14 @@ public class games {
 
     public static class Progression {
         public static void progression(int count) {
-            if (count == 4) {
+            if (count == LAST_ROUND) {
                 System.out.println("Congratulations, " + Engine.firstName + "!");
-            } else if (count < 4 && count > 0) {
+            } else if (count < LAST_ROUND && count > FIRST_ROUND) {
                 Scanner scanner = new Scanner(System.in);
                 Random random = new Random();
-                int startNumber = random.nextInt(20);
-                int countNumbers = 5 + random.nextInt(5);
-                int numOfProgressive = 1 + random.nextInt(5);
+                int startNumber = random.nextInt(NUMBER_RANGE);
+                int countNumbers = 5 + random.nextInt(CHOICE_OPERATOR + 2);
+                int numOfProgressive = 1 + random.nextInt(CHOICE_OPERATOR + 2);
                 int indexOfPastNum = 1 + random.nextInt(countNumbers - 1);
                 System.out.print("Question: " + startNumber);
                 int correctResponse = 0;
@@ -167,12 +164,12 @@ public class games {
     }
     public static class Prime {
         public static void prime(int count) {
-            if (count == 4) {
+            if (count == LAST_ROUND) {
                 System.out.println("Congratulations, " + Engine.firstName + "!");
-            } else if (count < 4 && count > 0) {
+            } else if (count < LAST_ROUND && count > FIRST_ROUND) {
                 Scanner scanner = new Scanner(System.in);
                 Random random = new Random();
-                int num = 2 + random.nextInt(10);
+                int num = 2 + random.nextInt(NUMBER_RANGE / 2);
                 System.out.println("Question: " + num);
                 String answerUser = scanner.next();
 
