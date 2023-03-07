@@ -2,9 +2,8 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-
 public class Engine {
-    public static String firstName;
+    private static String firstName;
     public static void engine(int numOfGame) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
@@ -31,5 +30,8 @@ public class Engine {
             System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
             GAMES.Prime.prime(1);
         }
+    }
+    public static String getFirstName() {
+        return firstName;
     }
 }

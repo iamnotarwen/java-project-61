@@ -2,7 +2,6 @@ package hexlet.code;
 
 import java.util.Random;
 import java.util.Scanner;
-import hexlet.code.Engine;
 
 public class GAMES {
     static final int NUMBER_RANGE = 20;
@@ -11,10 +10,11 @@ public class GAMES {
     static final int FIRST_ROUND = 0;
     static final int COUNT_DIVIDERS = 3;
     static final int MIN_LENGTH_NUMBER_SERIES = 5;
+
     public static class EvenGame {
         public static void evenGame(int count) {
             if (count == LAST_ROUND) {
-                System.out.println("Congratulations, " + Engine.firstName + "!");
+                System.out.println("Congratulations, " + Engine.getFirstName() + "!");
             }
             if (count < LAST_ROUND && count > FIRST_ROUND) {
                 Scanner scanner = new Scanner(System.in);
@@ -31,12 +31,12 @@ public class GAMES {
                         j = "yes";
                     }
                     System.out.println(i + " is wrong answer ;(. Correct answer was " + j + ".");
-                    System.out.println("Let's try again, " + Engine.firstName + "!");
+                    System.out.println("Let's try again, " + Engine.getFirstName() + "!");
                     scanner.close();
 
                 } else if (!userAnswer.equals("yes") && !userAnswer.equals("no")) {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct 'yes' or 'no'.");
-                    System.out.println("Let's try again, " + Engine.firstName + "!");
+                    System.out.println("Let's try again, " + Engine.getFirstName() + "!");
                     scanner.close();
                 } else {
                     System.out.println("Correct!");
@@ -62,7 +62,7 @@ public class GAMES {
 
         public static void calc(int count) {
             if (count == LAST_ROUND) {
-                System.out.println("Congratulations, " + Engine.firstName + "!");
+                System.out.println("Congratulations, " + Engine.getFirstName() + "!");
             } else if (count < LAST_ROUND && count > FIRST_ROUND) {
                 Scanner scanner = new Scanner(System.in);
                 Random random = new Random();
@@ -93,7 +93,7 @@ public class GAMES {
                     calc(count + 1);
                 } else {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + solution + ".");
-                    System.out.println("Let's try again, " + Engine.firstName + "!");
+                    System.out.println("Let's try again, " + Engine.getFirstName() + "!");
                 }
             }
         }
@@ -102,7 +102,7 @@ public class GAMES {
     public static class GreatDivider {
         public static void greatDivider(int count) {
             if (count == LAST_ROUND) {
-                System.out.println("Congratulations, " + Engine.firstName + "!");
+                System.out.println("Congratulations, " + Engine.getFirstName() + "!");
             } else if (count < LAST_ROUND && count > FIRST_ROUND) {
                 Scanner scanner = new Scanner(System.in);
                 Random random = new Random();
@@ -127,7 +127,7 @@ public class GAMES {
                     greatDivider(count + 1);
                 } else {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + result + ".");
-                    System.out.println("Let's try again, " + Engine.firstName + "!");
+                    System.out.println("Let's try again, " + Engine.getFirstName() + "!");
                 }
             }
         }
@@ -136,7 +136,7 @@ public class GAMES {
     public static class Progression {
         public static void progression(int count) {
             if (count == LAST_ROUND) {
-                System.out.println("Congratulations, " + Engine.firstName + "!");
+                System.out.println("Congratulations, " + Engine.getFirstName() + "!");
             } else if (count < LAST_ROUND && count > FIRST_ROUND) {
                 Scanner scanner = new Scanner(System.in);
                 Random random = new Random();
@@ -162,7 +162,7 @@ public class GAMES {
                     progression(count + 1);
                 } else {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + correctResponse + ".");
-                    System.out.println("Let's try again, " + Engine.firstName + "!");
+                    System.out.println("Let's try again, " + Engine.getFirstName() + "!");
                 }
             }
         }
@@ -170,7 +170,7 @@ public class GAMES {
     public static class Prime {
         public static void prime(int count) {
             if (count == LAST_ROUND) {
-                System.out.println("Congratulations, " + Engine.firstName + "!");
+                System.out.println("Congratulations, " + Engine.getFirstName() + "!");
             } else if (count < LAST_ROUND && count > FIRST_ROUND) {
                 Scanner scanner = new Scanner(System.in);
                 Random random = new Random();
@@ -186,7 +186,7 @@ public class GAMES {
                     prime(count + 1);
                 } else {
                     System.out.println(answerUser + " is wrong answer ;(.");
-                    System.out.println("Let's try again, " + Engine.firstName + "!");
+                    System.out.println("Let's try again, " + Engine.getFirstName() + "!");
                 }
             }
         }
