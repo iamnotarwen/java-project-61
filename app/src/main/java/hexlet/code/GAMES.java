@@ -31,18 +31,18 @@ public class GAMES {
                         j = "yes";
                     }
                     System.out.println(i + " is wrong answer ;(. Correct answer was " + j + ".");
-                    //System.out.println("Let's try again, " + Engine.firstName + "!");
-                    //scanner.close();
+                    System.out.println("Let's try again, " + Engine.firstName + "!");
+                    scanner.close();
 
                 } else if (!userAnswer.equals("yes") && !userAnswer.equals("no")) {
                     System.out.println(userAnswer + " is wrong answer ;(. Correct 'yes' or 'no'.");
-
+                    System.out.println("Let's try again, " + Engine.firstName + "!");
+                    scanner.close();
                 } else {
                     System.out.println("Correct!");
                     evenGame(count + 1);
                 }
-                System.out.println("Let's try again, " + Engine.firstName + "!");
-                scanner.close();
+
             }
         }
     }
